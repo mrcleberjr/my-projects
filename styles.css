@@ -1,0 +1,286 @@
+/* Estilos (universal)  */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #bdd8f8;
+}
+
+/* Header no topo */
+header {
+    padding: 1rem;
+    background-color: #4A8BDF;
+    color: white;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do header */
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navegação */
+nav {
+    position: absolute;
+    right: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #CFE3FF;
+    transition: color 0.3s;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer e botão de tema na parte inferior */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4A8BDF;
+    color: white;
+}
+
+#toggle-theme {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #79aad8;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+}
+
+#toggle-theme:hover {
+    background-color: #666;
+}
+
+/* Tema Claro */
+body.light-theme {
+    background-color: #E0F7FF; /* Azul mais claro */
+    color: #000;
+}
+
+body.light-theme header,
+body.light-theme footer {
+    background-color: #4A8BDF;
+}
+
+body.light-theme nav ul li a {
+    color: #CFE3FF;
+}
+
+/* Estilos para as Tabelas no Tema Claro */
+body.light-theme table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f5f5f5; /* Cinza claro */
+}
+
+body.light-theme table th,
+body.light-theme table td {
+    padding: 10px;
+    border: 1px solid #4A8BDF;
+    text-align: left;
+}
+
+body.light-theme table th {
+    background-color: #4A8BDF;
+    color: #fff; /* Cor da fonte do cabeçalho da tabela */
+}
+
+body.light-theme table td {
+    color: #fff; /* Cor da fonte das células da tabela */
+}
+
+body.light-theme table tr:nth-child(even) {
+    background-color: #e0e0e0; /* Cinza mais claro */
+}
+
+body.light-theme table tr:nth-child(odd) {
+    background-color: #d0d0d0; /* Cinza mais escuro */
+}
+
+/* Tema Escuro */
+body.dark-theme {
+    background-color: #273A5E;
+    color: #ffffff;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #3E4E68;
+}
+
+body.dark-theme nav ul li a {
+    color: #CFE3FF;
+}
+
+/* Estilos para as Tabelas no Tema Escuro */
+body.dark-theme table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* Branco */
+}
+
+body.dark-theme table th,
+body.dark-theme table td {
+    padding: 10px;
+    border: 1px solid #4A8BDF;
+    text-align: left;
+}
+
+body.dark-theme table th {
+    background-color: #4A8BDF;
+    color: #000; /* Cor da fonte do cabeçalho da tabela */
+}
+
+body.dark-theme table td {
+    color: #000; /* Cor da fonte das células da tabela */
+}
+
+body.dark-theme table tr:nth-child(even) {
+    background-color: #f0f0f0; /* Cinza claro */
+}
+
+body.dark-theme table tr:nth-child(odd) {
+    background-color: #e0e0e0; /* Cinza mais escuro */
+}
+
+/* Estilos para as Abas de Login e Registro */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Abas */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #4A8BDF;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tab-button.active {
+    color: #4A8BDF;
+    border-bottom: 2px solid #4A8BDF;
+}
+
+.tab-button:hover {
+    color: #3A6BBF;
+}
+
+/* Formulários */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os formulários */
+}
+
+.tab-content {
+    display: none;
+    width: 100%; /* Faz o conteúdo ocupar toda a largura disponível */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Faz o formulário ocupar toda a largura disponível */
+    max-width: 400px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+}
+
+label {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #ffffff; /* Cor do texto dos labels */
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    width: 100%; /* Faz com que o input ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+}
+
+/* Botão */
+button {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Faz com que o botão ocupe toda a largura disponível */
+    max-width: 250px; /* Define uma largura máxima para o botão */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    align-self: center; /* Centraliza o botão dentro do formulário */
+}
